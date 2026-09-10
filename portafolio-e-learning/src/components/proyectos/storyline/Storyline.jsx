@@ -17,10 +17,10 @@ function Storyline() {
   return (
     <ProjectLayout
       title={textos.title}
-      // logoSrc="/img/proyectos/storyline/logo.png"
+      logoSrc="/img/articulate-360/proyectos/titulo.png"
       logoAlt={textos.logoAlt}
-      // bulbLeftSrc="/img/proyectos/focos/foco-izquierdo.png"
-      // bulbRightSrc="/img/proyectos/focos/foco-derecho.png"
+      bulbLeftSrc="/img/fondo/proyectos/foco-izquierda.png"
+      bulbRightSrc="/img/fondo/proyectos/foco-derecha.png"
       courses={courses}
       footerText={textos.footerText}
       prevHref="/proyectos/rises-360"

@@ -13,9 +13,9 @@ import textos from "../../locales/español/software/articulate-360/textos.json";
 function Articulate360() {
   return (
     <SoftwareLayout
-      // logoSrc="/img/software/articulate-360/logo.png"
+      logoSrc="/img/articulate-360/software/titulo.png"
       logoAlt={textos.logoAlt}
-      // mockupSrc="/img/software/articulate-360/mockup.png"
+      mockupSrc="/img/articulate-360/software/logo-articulate-360.png"
       mockupAlt={textos.mockupAlt}
       topRightSrc="/img/fondo/ellipse-2.png"
       bottomLeftSrc="/img/fondo/ellipse.png"

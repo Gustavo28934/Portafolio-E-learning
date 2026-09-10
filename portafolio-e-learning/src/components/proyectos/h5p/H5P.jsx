@@ -21,10 +21,10 @@ function H5P() {
   return (
     <ProjectLayout
       title={textos.title}
-      // logoSrc="/img/proyectos/h5p/logo.png"
+      logoSrc="/img/h5p/proyectos/logo-h5p.png"
       logoAlt={textos.logoAlt}
-      // bulbLeftSrc="/img/proyectos/focos/foco-izquierdo.png"
-      // bulbRightSrc="/img/proyectos/focos/foco-derecho.png"
+      bulbLeftSrc="/img/fondo/proyectos/foco-izquierda.png"
+      bulbRightSrc="/img/fondo/proyectos/foco-derecha.png"
       courses={courses}
       footerText={textos.footerText}
       prevHref="/proyectos/storyline"

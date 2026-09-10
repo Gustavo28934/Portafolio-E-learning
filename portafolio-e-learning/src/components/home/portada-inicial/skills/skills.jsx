@@ -1,15 +1,12 @@
+import Image from "next/image";
 import textos from "../../../locales/español/home/textos.json";
 
 function Skills() {
-  // Estilos por cada programa (el texto viene del JSON).
-  const estilos = {
-    H5P: { bgColor: "bg-blue-500", textColor: "text-white", border: "" },
-    sl: { bgColor: "bg-fuchsia-500", textColor: "text-white", border: "" },
-    rs: {
-      bgColor: "bg-white",
-      textColor: "text-orange-500",
-      border: "border-2 border-orange-400",
-    },
+  // Imagen por cada programa (el listado viene del JSON).
+  const iconos = {
+    H5P: { src: "/img/h5p-icon-home.png", alt: "H5P" },
+    sl: { src: "/img/sl-icon-home.png", alt: "Storyline" },
+    rs: { src: "/img/rs-icon-home.png", alt: "Rise" },
   };
 
   return (
@@ -17,19 +14,22 @@ function Skills() {
       <span className="text-sm font-semibold text-gray-800 sm:text-base">
         {textos.skills.label}
       </span>
-      <div className="flex gap-3 sm:gap-4">
+      <div className="flex items-center gap-3 sm:gap-4">
         {textos.skills.items.map((name) => {
-          const s = estilos[name] ?? {
-            bgColor: "bg-slate-400",
-            textColor: "text-white",
-            border: "",
-          };
+          const icono = iconos[name];
+          if (!icono) return null;
           return (
             <div
               key={name}
-              className={`${s.bgColor} ${s.textColor} ${s.border} flex h-12 w-12 items-center justify-center rounded-full text-sm font-bold shadow-md sm:h-14 sm:w-14 sm:text-base`}
+              className="relative h-12 w-12 sm:h-14 sm:w-14"
             >
-              {name}
+              <Image
+                src={icono.src}
+                alt={icono.alt}
+                fill
+                sizes="56px"
+                className="object-contain"
+              />
             </div>
           );
         })}
