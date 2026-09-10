@@ -16,6 +16,8 @@
   },
   "botones": {
     "software": "Software",
-    "proyectos": "Projects"
+    "softwareHref": "/software/articulate-360",
+    "proyectos": "Projects",
+    "proyectosHref": "/proyectos/rises-360"
   }
 }

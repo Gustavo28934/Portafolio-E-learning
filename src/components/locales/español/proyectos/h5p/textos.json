@@ -3,15 +3,15 @@
   "logoAlt": "H5P",
   "footerText": "Haz clic en cada sección para ver los proyectos a detalle",
   "courses": [
-    "Curso 1",
-    "Curso 2",
-    "Curso 3",
-    "Curso 4",
-    "Curso 5",
-    "Curso 6",
-    "Curso 7",
-    "Curso 8",
-    "Curso 9",
-    "Curso 10"
+    { "label": "Curso 1", "href": "https://canvasutp.h5p.com/content/1292777107842603118" },
+    { "label": "Curso 2", "href": "https://canvasutp.h5p.com/content/1292760418459804918" },
+    { "label": "Curso 3", "href": "https://canvasutp.h5p.com/content/1292828766784412618" },
+    { "label": "Curso 4", "href": "https://canvasutp.h5p.com/content/1292828794648940398" },
+    { "label": "Curso 5", "href": "https://canvasutp.h5p.com/content/1292828802321189858" },
+    { "label": "Curso 6", "href": "https://canvasutp.h5p.com/content/1292809038887409748" },
+    { "label": "Curso 7", "href": "https://canvasutp.h5p.com/content/1292808151997458468" },
+    { "label": "Curso 8", "href": "https://canvasutp.h5p.com/content/1292795308294068088" },
+    { "label": "Curso 9", "href": "https://canvasutp.h5p.com/content/1292809124477599678" },
+    { "label": "Curso 10", "href": "https://canvasutp.h5p.com/content/1292799508434904618" }
   ]
 }

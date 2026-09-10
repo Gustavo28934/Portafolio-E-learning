@@ -12,8 +12,6 @@ import textos from "../../locales/español/proyectos/storyline/textos.json";
  * - bulbRightSrc: foco derecho del footer.
  */
 function Storyline() {
-  const courses = textos.courses.map((label) => ({ label, href: "#" }));
-
   return (
     <ProjectLayout
       title={textos.title}
@@ -21,7 +19,7 @@ function Storyline() {
       logoAlt={textos.logoAlt}
       bulbLeftSrc="/img/fondo/proyectos/foco-izquierda.png"
       bulbRightSrc="/img/fondo/proyectos/foco-derecha.png"
-      courses={courses}
+      courses={textos.courses}
       footerText={textos.footerText}
       prevHref="/proyectos/rises-360"
       nextHref="/proyectos/h5p"

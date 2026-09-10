@@ -16,8 +16,6 @@ import textos from "../../locales/español/proyectos/h5p/textos.json";
  * - bulbRightSrc: foco derecho del footer.
  */
 function H5P() {
-  const courses = textos.courses.map((label) => ({ label, href: "#" }));
-
   return (
     <ProjectLayout
       title={textos.title}
@@ -25,7 +23,7 @@ function H5P() {
       logoAlt={textos.logoAlt}
       bulbLeftSrc="/img/fondo/proyectos/foco-izquierda.png"
       bulbRightSrc="/img/fondo/proyectos/foco-derecha.png"
-      courses={courses}
+      courses={textos.courses}
       footerText={textos.footerText}
       prevHref="/proyectos/storyline"
       showNext={false}

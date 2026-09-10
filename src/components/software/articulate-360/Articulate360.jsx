@@ -22,7 +22,7 @@ function Articulate360() {
       paragraphs={textos.paragraphs}
       moreLabel={textos.moreLabel}
       footerText={textos.footerText}
-      moreHref="#"
+      moreHref={textos.moreHref}
       homeHref="/"
       showNext
       nextHref="/software/h5p"

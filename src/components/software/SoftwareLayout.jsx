@@ -7,7 +7,9 @@ import Link from "next/link";
  * - logoSrc:      string -> ruta del logo (columna izquierda, arriba). Slot listo.
  * - logoAlt:      string -> texto alternativo del logo.
  * - paragraphs:   Array<string> -> párrafos de la descripción.
- * - moreHref:     string -> destino del botón "Ver más" (por defecto "#").
+ * - moreHref:     string -> destino del botón "Ver más". Si está vacío, el botón
+ *                            se muestra desactivado. Los links "http..." abren en
+ *                            una pestaña nueva.
  * - mockupSrc:    string -> imagen del mockup (columna derecha). Slot listo.
  * - mockupAlt:    string -> texto alternativo del mockup.
  * - topRightSrc:  string -> imagen decorativa esquina superior derecha. Slot listo.
@@ -23,7 +25,7 @@ function SoftwareLayout({
   logoSrc,
   logoAlt = "Logo",
   paragraphs = [],
-  moreHref = "#",
+  moreHref = "",
   moreLabel = "Ver más",
   mockupSrc,
   mockupAlt = "Vista previa",
@@ -130,12 +132,24 @@ function SoftwareLayout({
 
           {/* Botón "Ver más" */}
           <div className="mt-6 md:mt-8">
-            <Link
-              href={moreHref}
-              className="inline-flex items-center justify-center rounded-xl bg-sky-400 px-8 py-3 text-base font-bold text-white shadow-md transition-colors hover:bg-sky-500 sm:px-10"
-            >
-              {moreLabel}
-            </Link>
+            {moreHref ? (
+              <Link
+                href={moreHref}
+                className="inline-flex items-center justify-center rounded-xl bg-sky-400 px-8 py-3 text-base font-bold text-white shadow-md transition-colors hover:bg-sky-500 sm:px-10"
+                {...(/^https?:\/\//i.test(moreHref)
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                {moreLabel}
+              </Link>
+            ) : (
+              <span
+                aria-disabled="true"
+                className="inline-flex cursor-not-allowed items-center justify-center rounded-xl bg-sky-400/60 px-8 py-3 text-base font-bold text-white shadow-md sm:px-10"
+              >
+                {moreLabel}
+              </span>
+            )}
           </div>
         </div>
 

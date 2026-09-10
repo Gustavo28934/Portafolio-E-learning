@@ -3,15 +3,15 @@
   "logoAlt": "Articulate Storyline",
   "footerText": "Haz clic en cada sección para ver los proyectos a detalle",
   "courses": [
-    "Curso 1",
-    "Curso 2",
-    "Curso 3",
-    "Curso 4",
-    "Curso 5",
-    "Curso 6",
-    "Curso 7",
-    "Curso 8",
-    "Curso 9",
-    "Curso 10"
+    { "label": "Curso 1", "href": "https://articulateusercontent.com/review/items/bOCmZS8aBVaCEfdE/story.html" },
+    { "label": "Curso 2", "href": "https://articulateusercontent.com/review/items/CKP31_PQFz5Q_vFU/story.html" },
+    { "label": "Curso 3", "href": "https://articulateusercontent.com/review/items/Q4Fz4dmIwefV8_qg/story.html" },
+    { "label": "Curso 4", "href": "https://articulateusercontent.com/review/items/MSV3IEaU7DBOrhef/story.html" },
+    { "label": "Curso 5", "href": "https://articulateusercontent.com/review/items/BUReJ9jRXWxx--MF/story.html" },
+    { "label": "Curso 6", "href": "https://articulateusercontent.com/review/items/9Bxryhkefupb-Fs7/story.html" },
+    { "label": "Curso 7", "href": "https://articulateusercontent.com/review/items/fkXrqJj6Dd4sQRuD/story.html" },
+    { "label": "Curso 8", "href": "https://articulateusercontent.com/review/items/NKtFu3KVNVg0HRDJ/story.html" },
+    { "label": "Curso 9", "href": "https://articulateusercontent.com/review/items/PRYujhxMHPfPQuN8/story.html" },
+    { "label": "Curso 10", "href": "https://articulateusercontent.com/review/items/HgDfRL7jgi-SkXZj/story.html" }
   ]
 }

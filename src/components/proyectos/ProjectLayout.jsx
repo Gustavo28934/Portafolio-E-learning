@@ -8,8 +8,11 @@ import Image from "next/image";
  * - title:        string  -> título que aparece arriba a la derecha (ej. "Rises 360").
  * - logoSrc:      string  -> ruta de la imagen del logo (arriba a la izquierda). Opcional.
  * - logoAlt:      string  -> texto alternativo del logo.
- * - courses:      Array   -> lista de cursos. Cada item: { label, href }.
+ * - courses:      Array   -> lista de cursos. Cada item puede ser:
+ *                              - un string: "Curso 1" (sin link, botón inactivo), o
+ *                              - un objeto: { "label": "Curso 1", "href": "https://..." }.
  *                            Por defecto genera "Curso 1" ... "Curso 10".
+ *                            Los href que empiezan con "http" se abren en una pestaña nueva.
  * - bulbLeftSrc:  string  -> ruta de la imagen del foco izquierdo (footer). Opcional.
  * - bulbRightSrc: string  -> ruta de la imagen del foco derecho (footer). Opcional.
  * - footerText:   string  -> texto del footer.
@@ -33,12 +36,15 @@ function ProjectLayout({
   nextHref,
 }) {
   // Genera 10 cursos por defecto si no se pasan.
-  const items =
-    courses ??
-    Array.from({ length: 10 }, (_, i) => ({
-      label: `Curso ${i + 1}`,
-      href: "#",
-    }));
+  // Cada curso puede venir como string ("Curso 1") o como objeto
+  // ({ label, href }). Aquí lo normalizamos siempre a { label, href }.
+  const items = (
+    courses ?? Array.from({ length: 10 }, (_, i) => `Curso ${i + 1}`)
+  ).map((course) =>
+    typeof course === "string"
+      ? { label: course, href: "" }
+      : { label: course.label, href: course.href ?? "" }
+  );
 
   return (
     <main className="relative flex min-h-screen flex-col overflow-hidden bg-white">
@@ -103,15 +109,39 @@ function ProjectLayout({
       {/* ====== GRID DE CURSOS ====== */}
       <section className="relative z-10 mx-auto flex w-full max-w-4xl flex-1 items-center px-4 py-8 sm:px-6 sm:py-10 md:py-12">
         <div className="grid w-full grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-4 md:gap-x-12 md:gap-y-5">
-          {items.map((course, i) => (
-            <Link
-              key={i}
-              href={course.href ?? "#"}
-              className="flex w-full items-center justify-center rounded-2xl bg-sky-400 px-4 py-3 text-center text-sm font-bold text-white shadow-md transition-all hover:bg-sky-500 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2 sm:py-4 sm:text-base"
-            >
-              {course.label}
-            </Link>
-          ))}
+          {items.map((course, i) => {
+            const baseClass =
+              "flex w-full items-center justify-center rounded-2xl px-4 py-3 text-center text-sm font-bold text-white shadow-md transition-all sm:py-4 sm:text-base";
+
+            // Sin link: se muestra el botón pero desactivado (no navega).
+            if (!course.href) {
+              return (
+                <span
+                  key={i}
+                  aria-disabled="true"
+                  className={`${baseClass} cursor-not-allowed bg-sky-400/60`}
+                >
+                  {course.label}
+                </span>
+              );
+            }
+
+            const isExternal = /^https?:\/\//i.test(course.href);
+            const activeClass = `${baseClass} bg-sky-400 hover:bg-sky-500 hover:ring-2 hover:ring-purple-500 hover:ring-offset-2`;
+
+            return (
+              <Link
+                key={i}
+                href={course.href}
+                className={activeClass}
+                {...(isExternal
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                {course.label}
+              </Link>
+            );
+          })}
         </div>
       </section>
 
