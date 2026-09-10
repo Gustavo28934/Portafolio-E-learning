@@ -1,0 +1,21 @@
+{
+  "logoAlt": "articulate 360",
+  "profileAlt": "Gustavo Fernández",
+  "nombre": {
+    "linea1": "Gustavo",
+    "linea2": "Fernández"
+  },
+  "subtitulo": {
+    "prefijo": "Designer",
+    "resaltado": "E-learning Multimedia"
+  },
+  "descripcion": "Specialized in creating dynamic, playful and interactive virtual courses. I focus on developing innovative learning experiences that combine design, technology and pedagogy, easing comprehension and user engagement.",
+  "skills": {
+    "label": "Programs used:",
+    "items": ["H5P", "sl", "rs"]
+  },
+  "botones": {
+    "software": "Software",
+    "proyectos": "Projects"
+  }
+}
