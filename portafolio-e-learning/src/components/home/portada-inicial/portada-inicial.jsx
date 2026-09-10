@@ -28,7 +28,7 @@ function Portada_inicial() {
         </div>
 
         {/* Descripción */}
-        <div className="mt-4 w-full max-w-2xl md:mt-5">
+        <div className="-ml-5 mt-4 w-full max-w-2xl sm:-ml-10 md:-ml-16 md:mt-5 lg:-ml-20">
           <Description />
         </div>
 

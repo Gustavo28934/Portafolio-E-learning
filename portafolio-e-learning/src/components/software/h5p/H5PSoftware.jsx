@@ -16,9 +16,9 @@ import textos from "../../locales/español/software/h5p/textos.json";
 function H5PSoftware() {
   return (
     <SoftwareLayout
-      // logoSrc="/img/software/h5p/logo.png"
+      logoSrc="/img/h5p/software/titulo.png"
       logoAlt={textos.logoAlt}
-      // mockupSrc="/img/software/h5p/mockup.png"
+      mockupSrc="/img/h5p/software/logo-h5p.png"
       mockupAlt={textos.mockupAlt}
       topRightSrc="/img/fondo/ellipse-2.png"
       bottomLeftSrc="/img/fondo/ellipse.png"

@@ -9,9 +9,9 @@ function NameSection() {
         {textos.nombre.linea2}
       </h1>
       <div className="mb-3 h-1.5 w-2/3 rounded-full bg-neutral-900 md:mb-4"></div>
-      <h2 className="text-xl italic tracking-tight text-gray-800 sm:text-2xl md:text-3xl lg:text-4xl">
+      <h2 className="whitespace-nowrap text-lg italic tracking-tight text-gray-800 sm:text-xl md:text-2xl lg:text-3xl">
         {textos.subtitulo.prefijo}{" "}
-        <span className="font-bold not-italic">
+        <span className="font-bold italic">
           {textos.subtitulo.resaltado}
         </span>
       </h2>
