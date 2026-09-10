@@ -3,15 +3,15 @@
   "logoAlt": "Articulate 360",
   "footerText": "Haz clic en cada sección para ver los proyectos a detalle",
   "courses": [
-    "Curso 1",
-    "Curso 2",
-    "Curso 3",
-    "Curso 4",
-    "Curso 5",
-    "Curso 6",
-    "Curso 7",
-    "Curso 8",
-    "Curso 9",
-    "Curso 10"
+    { "label": "Curso 1", "href": "https://articulateusercontent.com/review/uploads/19-S9Gf0krrA4zJBfiXmHmG-GLkpzzGS/WxbPKMSv/index.html" },
+    { "label": "Curso 2", "href": "https://articulateusercontent.com/review/uploads/QU-MMmA9_aKUVDeF58inzLem3ugtTuS_/XGYzUdAN/index.html" },
+    { "label": "Curso 3", "href": "https://articulateusercontent.com/review/uploads/jU32mvlJdBWMMrsmQ1ESB5c29trUpKJG/vuBHeik3/index.html" },
+    { "label": "Curso 4", "href": "https://articulateusercontent.com/review/uploads/cBYAUMksFAFH-agywcd7g9WbuD0qxOye/WyiQ6kse/index.html" },
+    { "label": "Curso 5", "href": "https://articulateusercontent.com/review/uploads/Hjo1Z2owkNG-5svUTCPKCk8HGNy09_Ck/QhIrHR9U/index.html" },
+    { "label": "Curso 6", "href": "https://articulateusercontent.com/review/uploads/-A-6A3enTZ8LGt1HmHDAj_fvuZ2UvhMS/xTefppNv/index.html" },
+    { "label": "Curso 7", "href": "https://articulateusercontent.com/review/uploads/KW7OCnyZC-XvqBxnyn7P3MrltOIVrFht/xekEjkwL/index.html" },
+    { "label": "Curso 8", "href": "https://articulateusercontent.com/review/uploads/k7iEkgdufiHzVPumsgL9ui2bRVWyZj-X/mmfEPG7X/index.html" },
+    { "label": "Curso 9", "href": "https://articulateusercontent.com/review/uploads/2khTufjjqXLmOPHWIipc5XjwVJFF68wt/AGJEZV1v/index.html" },
+    { "label": "Curso 10", "href": "https://articulateusercontent.com/review/uploads/vFzPwZNq7S42F6LIIkYB-FUHGQVs8wz8/q6W0j1zl/index.html" }
   ]
 }

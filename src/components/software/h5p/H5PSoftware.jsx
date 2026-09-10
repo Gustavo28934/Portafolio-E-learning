@@ -25,7 +25,7 @@ function H5PSoftware() {
       paragraphs={textos.paragraphs}
       moreLabel={textos.moreLabel}
       footerText={textos.footerText}
-      moreHref="#"
+      moreHref={textos.moreHref}
       homeHref="/"
       showPrev
       prevOnRight

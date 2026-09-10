@@ -3,15 +3,15 @@
   "logoAlt": "Articulate Storyline",
   "footerText": "Click on each section to see the projects in detail",
   "courses": [
-    "Course 1",
-    "Course 2",
-    "Course 3",
-    "Course 4",
-    "Course 5",
-    "Course 6",
-    "Course 7",
-    "Course 8",
-    "Course 9",
-    "Course 10"
+    { "label": "Course 1", "href": "" },
+    { "label": "Course 2", "href": "" },
+    { "label": "Course 3", "href": "" },
+    { "label": "Course 4", "href": "" },
+    { "label": "Course 5", "href": "" },
+    { "label": "Course 6", "href": "" },
+    { "label": "Course 7", "href": "" },
+    { "label": "Course 8", "href": "" },
+    { "label": "Course 9", "href": "" },
+    { "label": "Course 10", "href": "" }
   ]
 }
